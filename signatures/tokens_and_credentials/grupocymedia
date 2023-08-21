@@ -1,0 +1,54 @@
+---
+filename: grupocymedia.yaml
+signatures:
+
+  - name: Grupo Cymedia
+    status: enabled
+    author: Gian
+    date: "2023-08-20"
+    description: Detects potentially audit words in plaintext
+    severity: "70"
+    notes:
+    references:
+    watchman_apps:
+      slack_std:
+        category: secrets
+        scope:
+          - messages
+        file_types:
+        search_strings:
+          - grupocymedia
+          - "grupo cymedia"
+      slack_eg:
+        scope:
+          - messages
+          - drafts
+        file_types:
+        locations:
+          - public
+          - private
+          - connect
+        search_strings:
+          - grupocymedia
+          - "grupo cymedia"
+      gitlab:
+        scope:
+          - blobs
+          - commits
+          - milestones
+          - wiki_blobs
+          - issues
+          - merge_requests
+          - notes
+          - snippet_titles
+        search_strings:
+          - '"grupocymedia" -(svg|png|jpeg)'
+          - '"grupo cymedia" -(svg|png|jpeg)'
+    test_cases:
+      match_cases:
+        - "Cymedia"
+        - Cymedia
+      fail_cases:
+        - You need a strong password
+    patterns:
+      - '(?i)(?!.*bad|.*\s\$|.*normal|.*forgot|.*store|.*same|.*correct|.*require)(cymedia\s*[`=:\"]+\s*[^\s]+|grupocymedia.{0,40}is(?!.*in|.*not|.*for|.*wrong)\s*[`=:\"]*\s*[^\s]+|grupocymedia\s*[`=:\"]*\s*[^\s]+|grupocymedia\s*[`=:\"]+\s*[^\s]+|grupocymedia\s*[`=:\"]+\s*[^\s]+)'
