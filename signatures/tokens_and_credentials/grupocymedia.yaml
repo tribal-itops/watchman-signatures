@@ -51,4 +51,4 @@ signatures:
       fail_cases:
         - You need a strong password
     patterns:
-      - '(?i)(?!.*bad|.*\s\$|.*normal|.*forgot|.*store|.*same|.*correct|.*require)(cymedia\s*[`=:\"]+\s*[^\s]+|grupocymedia.{0,40}is(?!.*in|.*not|.*for|.*wrong)\s*[`=:\"]*\s*[^\s]+|grupocymedia\s*[`=:\"]*\s*[^\s]+|grupocymedia\s*[`=:\"]+\s*[^\s]+|grupocymedia\s*[`=:\"]+\s*[^\s]+)'
+      - '(?i)(?!.*bad|.*\s\$|.*normal|.*forgot|.*store|.*same|.*correct|.*require)(grupocymedia\s*[`=:\"]+\s*[^\s]+|grupocymedia.{0,40}is(?!.*in|.*not|.*for|.*wrong)\s*[`=:\"]*\s*[^\s]+|grupocymedia\s*[`=:\"]*\s*[^\s]+|grupocymedia\s*[`=:\"]+\s*[^\s]+|grupocymedia\s*[`=:\"]+\s*[^\s]+)'
