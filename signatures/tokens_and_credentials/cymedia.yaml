@@ -1,8 +1,8 @@
 ---
-filename: passwords.yaml
+filename: cymedia.yaml
 signatures:
 
-  - name: Words
+  - name: Cymedia
     status: enabled
     author: Gian
     date: "2023-08-20"
@@ -18,11 +18,6 @@ signatures:
         file_types:
         search_strings:
           - cymedia
-          - CYMEDIA
-          - grupocymedia
-          - elbert
-          - ELBERT
-          - Elbert
       slack_eg:
         scope:
           - messages
@@ -34,11 +29,6 @@ signatures:
           - connect
         search_strings:
           - cymedia
-          - CYMEDIA
-          - grupocymedia
-          - elbert
-          - ELBERT
-          - Elbert
       gitlab:
         scope:
           - blobs
@@ -51,8 +41,6 @@ signatures:
           - snippet_titles
         search_strings:
           - '"cymedia" -(svg|png|jpeg)'
-          - '"grupocymedia" -(svg|png|jpeg)'
-          - '"elbert" -(svg|png|jpeg)'
     test_cases:
       match_cases:
         - "Cymedia"
